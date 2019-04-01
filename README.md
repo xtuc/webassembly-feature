@@ -27,3 +27,5 @@ console.log(supports["JS-BigInt-integration"]()); // false
 console.log(supports["multi-value"]());           // false
 console.log(supports["mutable-global"]());        // true
 ```
+
+Demo: https://sauleau.com/notes/test-if-a-WebAssembly-feature-is-supported.html.
