@@ -6,6 +6,7 @@ features = $(shell find ./features/* -type d)
 
 define build_feature
 	$(wat2wasm) \
+		--enable-simd \
 		--enable-multi-value \
 		"$(1)/module.wast" -o "$(1)/module.wasm"
 	hexdump -C "$(1)/module.wasm" \
@@ -24,3 +25,5 @@ test:
 	$(node) --experimental-wasm-mv test.js multi-value 1
 	$(node) --no-experimental-wasm-mut-global test.js mutable-global 0
 	$(node) --experimental-wasm-mut-global test.js mutable-global 1
+	$(node) --no-experimental-wasm-simd test.js simd 0
+	$(node) --experimental-wasm-simd test.js simd 1
