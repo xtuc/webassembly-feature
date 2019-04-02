@@ -26,6 +26,7 @@ const supports = require("webassembly-feature");
 console.log(supports["JS-BigInt-integration"]()); // false
 console.log(supports["multi-value"]());           // false
 console.log(supports["mutable-global"]());        // true
+console.log(supports["simd"]());                  // false
 ```
 
 Demo: https://sauleau.com/notes/test-if-a-WebAssembly-feature-is-supported.html.
