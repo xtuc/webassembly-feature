@@ -1,7 +1,6 @@
 (module
-  (memory 1)
-  (func
-    (v128.const i32 0x0 0x0 0x0 0x0)
-    (drop)
+  (func (result v128)
+    (v128.const i32x4 0x00000001 0x00000002 0x00000003 0x00000004)
+    (return)
   )
 )
