@@ -14,8 +14,6 @@ process.stdin.on('end', () => {
   const array = Object.keys(obj).map(key => obj[key]);
   console.log(`
 module.exports["${featureName}"] = function test() {
-  const test = require("../${featureTestFile}");
-  const buf = new Uint8Array([${array.join()}]);
-  return test(buf);
+  return WebAssembly.validate(new Uint8Array([${array.join()}]));
 }`);
 });
