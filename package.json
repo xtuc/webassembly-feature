@@ -1,6 +1,6 @@
 {
   "name": "webassembly-feature",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Test if a WebAssembly feature is supported",
   "main": "lib/index.js",
   "scripts": {
