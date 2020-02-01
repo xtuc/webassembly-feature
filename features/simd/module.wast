@@ -1,6 +1,7 @@
 (module
-  (func (result v128)
-    (v128.const i32x4 0x00000001 0x00000002 0x00000003 0x00000004)
-    (return)
+  (func (param v128) (result v128)
+    local.get 0
+    local.get 0
+    i32x4.eq
   )
 )
